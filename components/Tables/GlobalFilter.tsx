@@ -1,4 +1,3 @@
-import 'regenerator-runtime/runtime'
 import { useState } from 'react'
 import { FilterValue } from 'react-table'
 

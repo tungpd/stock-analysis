@@ -1,4 +1,3 @@
-import 'regenerator-runtime/runtime'
 import { FilterValue } from 'react-table'
 import dynamic from 'next/dynamic'
 import { Filter } from 'components/Controls/Filter'

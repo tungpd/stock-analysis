@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { FilterValue } from 'react-table'
 import { CloseIcon } from 'components/Icons/Close'
-import 'regenerator-runtime/runtime'
 
 interface Props {
 	useAsyncDebounce: (value: any, wait: number) => any

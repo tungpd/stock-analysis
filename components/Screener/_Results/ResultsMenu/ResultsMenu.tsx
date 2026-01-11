@@ -1,4 +1,3 @@
-import 'regenerator-runtime/runtime'
 import { FilterValue } from 'react-table'
 import { Export } from 'components/Controls/Export'
 import { Filter } from 'components/Controls/Filter'
