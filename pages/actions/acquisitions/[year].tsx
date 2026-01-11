@@ -42,12 +42,16 @@ export const ActionsAcquisitionsYear = ({ year, data }: ActionProps) => {
 					const symbol = sliced[0]
 					const name = sliced[1]
 					return (
-						<Link href={`/stocks/${symbol.toLowerCase()}/`} prefetch={false}>
-							<a className="bll" title={name}>
-								{name}
-							</a>
-						</Link>
-					)
+                        <Link
+                            href={`/stocks/${symbol.toLowerCase()}/`}
+                            prefetch={false}
+                            className="bll"
+                            title={name}>
+
+                            {name}
+
+                        </Link>
+                    );
 				}
 				return value
 			}

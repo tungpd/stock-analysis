@@ -23,8 +23,8 @@ export function Footer() {
 	const { event } = useEvent()
 
 	return (
-		<>
-			<footer className="clear-both bg-gray-800">
+        <>
+            <footer className="clear-both bg-gray-800">
 				<div className="mx-auto max-w-7xl px-5 pt-12 sm:px-6 lg:px-8 lg:pt-16 lg:pb-8">
 					<div className="xl:grid xl:grid-cols-3 xl:gap-8">
 						<div className="grid grid-cols-2 gap-8 xl:col-span-2">
@@ -34,8 +34,11 @@ export function Footer() {
 									<ul className="mt-4 space-y-4">
 										{navigation.sections.map(item => (
 											<li key={item.name}>
-												<Link href={item.href} prefetch={false}>
-													<a className="text-base text-gray-300 hover:text-white">{item.name}</a>
+												<Link
+                                                    href={item.href}
+                                                    prefetch={false}
+                                                    className="text-base text-gray-300 hover:text-white">
+													{item.name}
 												</Link>
 											</li>
 										))}
@@ -45,23 +48,30 @@ export function Footer() {
 									<h4 className="text-sm font-semibold uppercase tracking-wider text-gray-400">Support</h4>
 									<ul className="mt-4 space-y-4">
 										<li>
-											<Link href="/contact/" prefetch={false}>
-												<a className="text-base text-gray-300 hover:text-white">Contact Us</a>
+											<Link
+                                                href="/contact/"
+                                                prefetch={false}
+                                                className="text-base text-gray-300 hover:text-white">
+												Contact Us
 											</Link>
 										</li>
 										<li>
-											<Link href="/login/" prefetch={false}>
-												<a className="text-base text-gray-300 hover:text-white">Login</a>
+											<Link
+                                                href="/login/"
+                                                prefetch={false}
+                                                className="text-base text-gray-300 hover:text-white">
+												Login
 											</Link>
 										</li>
 										<li>
-											<Link href="/pro/" prefetch={false}>
-												<a
-													className="text-base text-gray-300 hover:text-white"
-													onClick={() => event('Free_Trial_Click', { location: 'Footer_Links' })}
-												>
+											<Link
+                                                href="/pro/"
+                                                prefetch={false}
+                                                className="text-base text-gray-300 hover:text-white"
+                                                onClick={() => event('Free_Trial_Click', { location: 'Footer_Links' })}>
+												
 													Free Trial
-												</a>
+												
 											</Link>
 										</li>
 									</ul>
@@ -73,8 +83,11 @@ export function Footer() {
 									<ul className="mt-4 space-y-4">
 										{navigation.company.map(item => (
 											<li key={item.name}>
-												<Link href={item.href} prefetch={false}>
-													<a className="text-base text-gray-300 hover:text-white">{item.name}</a>
+												<Link
+                                                    href={item.href}
+                                                    prefetch={false}
+                                                    className="text-base text-gray-300 hover:text-white">
+													{item.name}
 												</Link>
 											</li>
 										))}
@@ -85,8 +98,11 @@ export function Footer() {
 									<ul className="mt-4 space-y-4">
 										{navigation.legal.map(item => (
 											<li key={item.name}>
-												<Link href={item.href} prefetch={false}>
-													<a className="text-base text-gray-300 hover:text-white">{item.name}</a>
+												<Link
+                                                    href={item.href}
+                                                    prefetch={false}
+                                                    className="text-base text-gray-300 hover:text-white">
+													{item.name}
 												</Link>
 											</li>
 										))}
@@ -182,6 +198,6 @@ export function Footer() {
 					</div>
 				</div>
 			</footer>
-		</>
-	)
+        </>
+    );
 }

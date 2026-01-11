@@ -3,10 +3,10 @@ import Link from 'next/link'
 
 export const NewsletterWidget = () => {
 	return (
-		<div className="rounded border border-gray-200 bg-gray-50 p-6 pb-8 text-center lg:px-7">
-			<h3 className="mb-4 text-[1.4rem] font-bold">The Stock Analysis Newsletter</h3>
-			<p className="mb-5 text-lg">Get the latest updates in your inbox.</p>
-			<form method="post" acceptCharset="UTF-8" action="https://www.aweber.com/scripts/addlead.pl">
+        <div className="rounded border border-gray-200 bg-gray-50 p-6 pb-8 text-center lg:px-7">
+            <h3 className="mb-4 text-[1.4rem] font-bold">The Stock Analysis Newsletter</h3>
+            <p className="mb-5 text-lg">Get the latest updates in your inbox.</p>
+            <form method="post" acceptCharset="UTF-8" action="https://www.aweber.com/scripts/addlead.pl">
 				<div className="relative mt-1 mb-3 rounded-md shadow-sm">
 					<div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
 						<MailIcon classes="h-5 w-5 text-gray-400" />
@@ -41,11 +41,11 @@ export const NewsletterWidget = () => {
 				/>
 				<div className="mt-1.5 text-sm">
 					Read the{' '}
-					<Link href="/privacy-policy/">
-						<a className="bll">privacy policy.</a>
+					<Link href="/privacy-policy/" className="bll">
+						privacy policy.
 					</Link>
 				</div>
 			</form>
-		</div>
-	)
+        </div>
+    );
 }

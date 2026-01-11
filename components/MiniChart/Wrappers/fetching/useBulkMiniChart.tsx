@@ -1,4 +1,4 @@
-import { useQuery } from 'react-query'
+import { useQuery } from '@tanstack/react-query'
 import { getBulkMiniChartData } from './getBulkMiniChartData'
 import { MiniChartSymbols, MiniChartData, MiniChartRanges } from '../MiniChart.types'
 

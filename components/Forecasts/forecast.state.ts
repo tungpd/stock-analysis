@@ -1,4 +1,4 @@
-import create from 'zustand'
+import { create } from 'zustand'
 
 type Charts = 'Bar Chart' | 'Line Chart'
 type History = '1 Year' | '2 Years' | '5 Years'

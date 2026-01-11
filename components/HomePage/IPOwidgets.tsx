@@ -49,8 +49,8 @@ export const IPOwidgets = ({ recent, upcoming }: Props) => {
 	}
 
 	return (
-		<>
-			<div className="flex flex-col space-y-6 lg:space-y-8">
+        <>
+            <div className="flex flex-col space-y-6 lg:space-y-8">
 				<section className="px-3 xs:px-4 sm:px-5 lg:px-0">
 					<HeadingLink url="/ipos/" title="Recent IPOs" classes="mb-1" />
 					<IPOTable ipos={recent} />
@@ -62,13 +62,13 @@ export const IPOwidgets = ({ recent, upcoming }: Props) => {
 					) : (
 						<div className="w-full border border-gray-200 p-3">
 							There are no upcoming IPOs that have been scheduled.{' '}
-							<Link href="/ipos/filings/" prefetch={false}>
-								<a className="bll">View all IPO filings.</a>
+							<Link href="/ipos/filings/" prefetch={false} className="bll">
+								View all IPO filings.
 							</Link>
 						</div>
 					)}
 				</section>
 			</div>
-		</>
-	)
+        </>
+    );
 }

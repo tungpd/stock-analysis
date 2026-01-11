@@ -22,11 +22,11 @@ export function MyAccount({ u }: Props) {
 	const sub = u?.status === 'active' || u?.status === 'trialing' ? true : false
 
 	return (
-		<>
-			<h1 className="mb-5 border-b-2 border-gray-800 pb-4 text-3xl font-bold text-gray-800 xs:text-4xl">
+        <>
+            <h1 className="mb-5 border-b-2 border-gray-800 pb-4 text-3xl font-bold text-gray-800 xs:text-4xl">
 				My Account
 			</h1>
-			<div className="rounded-md border border-gray-200 p-3 text-base xs:p-4 xs:text-lg">
+            <div className="rounded-md border border-gray-200 p-3 text-base xs:p-4 xs:text-lg">
 				<h2 className="hh2">User Information</h2>
 				{u?.email && (
 					<div>
@@ -39,7 +39,7 @@ export function MyAccount({ u }: Props) {
 					</div>
 				)}
 			</div>
-			<div className="rounded-md border border-gray-200 p-3 text-base xs:p-4 xs:text-lg">
+            <div className="rounded-md border border-gray-200 p-3 text-base xs:p-4 xs:text-lg">
 				<h2 className="hh2">Manage Subscription</h2>
 				{showStatus && (
 					<div className="mb-2">
@@ -64,16 +64,20 @@ export function MyAccount({ u }: Props) {
 				)}
 				{sub && u?.cancel_url && (
 					<div className="mt-3">
-						<Link href="/pro/cancel/" prefetch={false}>
-							<a className="bll" onClick={() => event('Cancel', { step: 'My_Account_Page' })}>
+						<Link
+                            href="/pro/cancel/"
+                            prefetch={false}
+                            className="bll"
+                            onClick={() => event('Cancel', { step: 'My_Account_Page' })}>
+							
 								Cancel Subscription
-							</a>
+							
 						</Link>
 					</div>
 				)}
 				{!sub && <ReActivate email={u?.email} status={u?.status} />}
 			</div>
-			<GetSupport />
-		</>
-	)
+            <GetSupport />
+        </>
+    );
 }

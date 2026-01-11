@@ -23,13 +23,17 @@ export const ActionsNavigation = () => {
 	const tabs = ['listed', 'delisted', 'splits', 'changes', 'spinoffs', 'bankruptcies', 'acquisitions']
 
 	return (
-		<nav className="border-b-[3px] border-blue-brand_sharp">
-			<ul className="navmenu" ref={menuref}>
+        <nav className="border-b-[3px] border-blue-brand_sharp">
+            <ul className="navmenu" ref={menuref}>
 				<li>
-					<Link href={`/actions/${path.three ? `${path.three}/` : ''}`} prefetch={false}>
-						<a data-title="Actions" className={!path.two || path.two.includes('20') ? 'active' : 'inactive'}>
+					<Link
+                        href={`/actions/${path.three ? `${path.three}/` : ''}`}
+                        prefetch={false}
+                        data-title="Actions"
+                        className={!path.two || path.two.includes('20') ? 'active' : 'inactive'}>
+						
 							Actions
-						</a>
+						
 					</Link>
 				</li>
 				{tabs.map(tab => {
@@ -40,19 +44,20 @@ export const ActionsNavigation = () => {
 					}
 
 					return (
-						<li key={tab}>
-							<Link href={`/actions/${tab}/${append}`} prefetch={false}>
-								<a
-									data-title={tab[0].toUpperCase() + tab.slice(1)}
-									className={path.two === tab ? 'active' : 'inactive'}
-								>
-									{tab[0].toUpperCase() + tab.slice(1)}
-								</a>
-							</Link>
-						</li>
-					)
+                        <li key={tab}>
+                            <Link
+                                href={`/actions/${tab}/${append}`}
+                                prefetch={false}
+                                data-title={tab[0].toUpperCase() + tab.slice(1)}
+                                className={path.two === tab ? 'active' : 'inactive'}>
+
+                                {tab[0].toUpperCase() + tab.slice(1)}
+
+                            </Link>
+                        </li>
+                    );
 				})}
 			</ul>
-		</nav>
-	)
+        </nav>
+    );
 }

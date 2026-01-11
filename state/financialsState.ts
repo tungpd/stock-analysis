@@ -1,4 +1,4 @@
-import create from 'zustand'
+import { create } from 'zustand'
 
 interface FinancialsState {
 	range: 'annual' | 'quarterly' | 'trailing'

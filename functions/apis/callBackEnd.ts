@@ -81,6 +81,23 @@ export async function getMarketNews(type: string) {
 
 export async function getHomePageData() {
 	const response = await getData('homepage')
+	// Mock data for dev
+	if (!response || Object.keys(response).length === 0) {
+		return {
+			date: new Date().toISOString().split('T')[0],
+			marketStatus: 'closed',
+			gainers: [],
+			losers: [],
+			ipoCalendar: [],
+			recentIpos: [],
+			news: [],
+			trending: [
+				{ s: 'AAPL', n: 'Apple Inc.', t: 'stocks' },
+				{ s: 'GOOGL', n: 'Alphabet Inc.', t: 'stocks' },
+				{ s: 'MSFT', n: 'Microsoft Corp.', t: 'stocks' }
+			]
+		}
+	}
 	return response
 }
 

@@ -12,12 +12,12 @@ type Item = {
 
 function ListItem({ url, title }: Item) {
 	return (
-		<li>
-			<Link href={url} prefetch={false}>
-				<a className="bll text-base md:text-lg">{title}</a>
+        <li>
+            <Link href={url} prefetch={false} className="bll text-base md:text-lg">
+				{title}
 			</Link>
-		</li>
-	)
+        </li>
+    );
 }
 
 export default function StockListPage({ data }: { data: any }) {

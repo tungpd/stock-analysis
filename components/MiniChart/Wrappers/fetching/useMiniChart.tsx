@@ -1,5 +1,5 @@
 import { getData } from 'functions/apis/API'
-import { useQuery } from 'react-query'
+import { useQuery } from '@tanstack/react-query'
 import { MiniChartRanges } from '../MiniChart.types'
 
 type Props = {

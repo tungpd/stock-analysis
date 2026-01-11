@@ -9,8 +9,8 @@ type Trending = {
 
 export function Hero({ trending }: { trending: Trending[] }) {
 	return (
-		<>
-			<section className="home-hero herobg border-b border-gray-200 px-4 pb-12 pt-20 shadow-sm md:pt-32 md:pb-24 lg:pt-44 lg:pb-40 landscape:border-t-2 landscape:md:border-t-0">
+        <>
+            <section className="home-hero herobg border-b border-gray-200 px-4 pb-12 pt-20 shadow-sm md:pt-32 md:pb-24 lg:pt-44 lg:pb-40 landscape:border-t-2 landscape:md:border-t-0">
 				<div className="mx-auto max-w-[850px] text-center">
 					<h1 className="mb-3 text-2xl font-bold xs:text-3xl sm:mb-5 md:text-4xl lg:mb-7 lg:text-[42px]">
 						Search for a stock to start your analysis
@@ -29,25 +29,24 @@ export function Hero({ trending }: { trending: Trending[] }) {
 						{trending.map((t, index) => {
 							if (index > 0) {
 								return (
-									<span key={t.s}>
-										,{' '}
-										<Link href={`/stocks/${t.s.toLowerCase()}/`} prefetch={false}>
-											<a className="bll">{t.s}</a>
+                                    <span key={t.s}>,{' '}
+                                        <Link href={`/stocks/${t.s.toLowerCase()}/`} prefetch={false} className="bll">
+											{t.s}
 										</Link>
-									</span>
-								)
+                                    </span>
+                                );
 							}
 							return (
-								<span key={t.s}>
-									<Link href={`/stocks/${t.s.toLowerCase()}/`} prefetch={false}>
-										<a className="bll">{t.s}</a>
+                                <span key={t.s}>
+                                    <Link href={`/stocks/${t.s.toLowerCase()}/`} prefetch={false} className="bll">
+										{t.s}
 									</Link>
-								</span>
-							)
+                                </span>
+                            );
 						})}
 					</div>
 				</div>
 			</section>
-		</>
-	)
+        </>
+    );
 }

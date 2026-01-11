@@ -14,20 +14,24 @@ interface Props {
 
 export const Profile = ({ info, data }: Props) => {
 	return (
-		<div>
-			<h2 className="hh2 mb-2">{`About ${info.ticker}`}</h2>
-			<p>
+        <div>
+            <h2 className="hh2 mb-2">{`About ${info.ticker}`}</h2>
+            <p>
 				{data.description}{' '}
 				{info.type === 'stocks' && (
-					<Link href={`/stocks/${info.symbol}/company/`} prefetch={false}>
-						<a className="bll" aria-hidden="true" tabIndex={-1}>
+					<Link
+                        href={`/stocks/${info.symbol}/company/`}
+                        prefetch={false}
+                        className="bll"
+                        aria-hidden="true"
+                        tabIndex={-1}>
+						
 							[Read more...]
-						</a>
+						
 					</Link>
 				)}
 			</p>
-
-			<div className="mt-3 grid grid-cols-2 gap-3">
+            <div className="mt-3 grid grid-cols-2 gap-3">
 				{data.infoTable &&
 					Object.keys(data.infoTable).map((number, index) => {
 						return (
@@ -45,8 +49,7 @@ export const Profile = ({ info, data }: Props) => {
 						)
 					})}
 			</div>
-
-			{info.type === 'stocks' && <Button url={`/stocks/${info.symbol}/company/`} text="Full Company Profile" />}
-		</div>
-	)
+            {info.type === 'stocks' && <Button url={`/stocks/${info.symbol}/company/`} text="Full Company Profile" />}
+        </div>
+    );
 }

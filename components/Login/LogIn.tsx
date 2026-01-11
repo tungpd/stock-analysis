@@ -16,24 +16,24 @@ export function LogIn({ signIn, loading, errorMsg }: Props) {
 	const { event } = useEvent()
 
 	return (
-		<>
-			<div className="sm:mx-auto sm:w-full sm:max-w-md">
+        <>
+            <div className="sm:mx-auto sm:w-full sm:max-w-md">
 				<h1 className="text-center text-2xl font-bold text-gray-900 xs:text-3xl">Log in to your account</h1>
 				<p className="mt-2 text-center text-smaller font-medium text-gray-600">
 					Or{' '}
-					<Link href="/pro/" prefetch={false}>
-						<a
-							className="bll"
-							id="tag-upgr-login"
-							onClick={() => event('Free_Trial_Click', { location: 'Login_Page' })}
-						>
+					<Link
+                        href="/pro/"
+                        prefetch={false}
+                        className="bll"
+                        id="tag-upgr-login"
+                        onClick={() => event('Free_Trial_Click', { location: 'Login_Page' })}>
+						
 							start your free 30-day trial
-						</a>
+						
 					</Link>
 				</p>
 			</div>
-
-			<div className="mt-6 xs:mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+            <div className="mt-6 xs:mt-8 sm:mx-auto sm:w-full sm:max-w-md">
 				{errorMsg && (
 					<>
 						<Error message={errorMsg} />
@@ -80,6 +80,6 @@ export function LogIn({ signIn, loading, errorMsg }: Props) {
 					</div>
 				</div>
 			</div>
-		</>
-	)
+        </>
+    );
 }

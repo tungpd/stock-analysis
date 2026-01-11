@@ -4,7 +4,7 @@ import { formatDateClean } from 'functions/datetime/formatDates'
 export const Byline = ({ date }: { date?: string }) => {
 	const AboutLink = () => (
 		<Link href="/about/" prefetch={false}>
-			<a>Kris Gunnars, BSc</a>
+			Kris Gunnars, BSc
 		</Link>
 	)
 

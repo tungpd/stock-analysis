@@ -23,43 +23,45 @@ export function MenuNavItem({ item, path }: NavItemProps) {
 	}
 
 	return (
-		<>
-			<div
+        <>
+            <div
 				className={matchParentPath(path, item.href) ? 'nav-menu-wrap current group' : 'nav-menu-wrap group'}
 				onClick={() => {
 					if (!expanded) expand()
 				}}
 			>
-				<Link href={item.href} prefetch={false}>
-					<a
-						className={matchParentPath(path, item.href) ? 'nav-item current parent' : 'nav-item parent'}
-						title={item.name}
-						onClick={close}
-					>
-						<item.icon className="nav-icon" />
-						<span className="nav-label">{item.name}</span>
-					</a>
-				</Link>
+				<Link
+                    href={item.href}
+                    prefetch={false}
+                    className={matchParentPath(path, item.href) ? 'nav-item current parent' : 'nav-item parent'}
+                    title={item.name}
+                    onClick={close}>
+
+                    <item.icon className="nav-icon" />
+                    <span className="nav-label">{item.name}</span>
+
+                </Link>
 				<div className="nav-arrow-wrap" onClick={openClose}>
 					<NavArrowIcon classes={isOpen[item.name] ? 'nav-arrow open' : 'nav-arrow closed'} />
 				</div>
 			</div>
-
-			{item.children && isOpen[item.name] && expanded && (
+            {item.children && isOpen[item.name] && expanded && (
 				<div className="space-y-0.5">
 					{item.children.map(subItem => (
-						<Link key={subItem.name} href={subItem.href} prefetch={false}>
-							<a
-								className={matchPath(path, subItem.href) ? 'nav-item current subitem' : 'nav-item subitem'}
-								onClick={close}
-								title={subItem.name}
-							>
-								<span className="nav-label">{subItem.name}</span>
-							</a>
-						</Link>
+						<Link
+                            key={subItem.name}
+                            href={subItem.href}
+                            prefetch={false}
+                            className={matchPath(path, subItem.href) ? 'nav-item current subitem' : 'nav-item subitem'}
+                            onClick={close}
+                            title={subItem.name}>
+
+                            <span className="nav-label">{subItem.name}</span>
+
+                        </Link>
 					))}
 				</div>
 			)}
-		</>
-	)
+        </>
+    );
 }

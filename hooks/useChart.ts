@@ -1,5 +1,5 @@
 import { getData } from 'functions/apis/API'
-import { useQuery } from 'react-query'
+import { useQuery } from '@tanstack/react-query'
 import { Info } from 'types/Info'
 import { getChartUrl } from 'components/PriceChart/PriceChart.functions'
 import { InitialData } from 'types/Charts'

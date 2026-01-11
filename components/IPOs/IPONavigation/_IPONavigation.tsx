@@ -2,41 +2,57 @@ import Link from 'next/link'
 
 export function IPONavigation({ path }: { path: string }) {
 	return (
-		<div className="mb-1">
-			<div>
+        <div className="mb-1">
+            <div>
 				<nav className="mb-1.5 border-b-[3px] border-blue-brand_sharp">
 					<ul className="navmenu">
 						<li>
-							<Link href="/ipos/" prefetch={false}>
-								<a data-title="IPOs" className={!path ? 'active' : 'inactive'}>
+							<Link
+                                href="/ipos/"
+                                prefetch={false}
+                                data-title="IPOs"
+                                className={!path ? 'active' : 'inactive'}>
+								
 									Recent
-								</a>
+								
 							</Link>
 						</li>
 						<li>
-							<Link href="/ipos/calendar/" prefetch={false}>
-								<a data-title="Calendar" className={path === 'calendar' ? 'active' : 'inactive'}>
+							<Link
+                                href="/ipos/calendar/"
+                                prefetch={false}
+                                data-title="Calendar"
+                                className={path === 'calendar' ? 'active' : 'inactive'}>
+								
 									Calendar
-								</a>
+								
 							</Link>
 						</li>
 						<li>
-							<Link href="/ipos/statistics/" prefetch={false}>
-								<a data-title="Statistics" className={path === 'statistics' ? 'active' : 'inactive'}>
+							<Link
+                                href="/ipos/statistics/"
+                                prefetch={false}
+                                data-title="Statistics"
+                                className={path === 'statistics' ? 'active' : 'inactive'}>
+								
 									Statistics
-								</a>
+								
 							</Link>
 						</li>
 						<li>
-							<Link href="/ipos/news/" prefetch={false}>
-								<a data-title="News" className={path === 'news' ? 'active' : 'inactive'}>
+							<Link
+                                href="/ipos/news/"
+                                prefetch={false}
+                                data-title="News"
+                                className={path === 'news' ? 'active' : 'inactive'}>
+								
 									News
-								</a>
+								
 							</Link>
 						</li>
 					</ul>
 				</nav>
 			</div>
-		</div>
-	)
+        </div>
+    );
 }

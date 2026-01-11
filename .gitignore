@@ -34,5 +34,22 @@ yarn-error.log*
 # vercel
 .vercel
 
-#other
+# typescript
 tsconfig.tsbuildinfo
+*.tsbuildinfo
+next-env.d.ts
+
+# upgrade artifacts
+UPGRADE_SUMMARY.md
+
+# ide
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+
+# os
+.DS_Store
+Thumbs.db

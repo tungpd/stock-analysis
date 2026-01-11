@@ -1,4 +1,4 @@
-import create from 'zustand'
+import { create } from 'zustand'
 
 type Trending = { s: string; n: string; t: 's' | 'e' }
 

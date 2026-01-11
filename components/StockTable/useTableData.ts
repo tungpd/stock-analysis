@@ -1,5 +1,5 @@
 import { getSelect } from 'functions/apis/getSelect'
-import { useQuery } from 'react-query'
+import { useQuery } from '@tanstack/react-query'
 import { TableDynamic } from './TableTypes'
 import { transientState } from './transient.state'
 

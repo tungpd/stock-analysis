@@ -25,10 +25,10 @@ export function ButtonWhite({ text, url, className, id, onClick }: Props) {
 	}
 
 	return (
-		<Link href={url || '#'} prefetch={false}>
-			<a className={classes} id={id}>
-				{text}
-			</a>
-		</Link>
-	)
+        <Link href={url || '#'} prefetch={false} className={classes} id={id}>
+
+            {text}
+
+        </Link>
+    );
 }

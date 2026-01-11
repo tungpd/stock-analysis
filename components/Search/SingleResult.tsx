@@ -103,14 +103,19 @@ export const SingleResult = ({ index, result, setOpen }: Props) => {
 	}
 
 	return (
-		<li className="border-b border-gray-200 first:border-t last:border-none">
-			<Link href={url} prefetch={false}>
-				<a data-num={index + 1} className={searchResultStyles} onClick={() => setOpen(false)}>
-					<span className="min-w-[3rem]">{symbol}</span>
-					<span className="grow">{name}</span>
-					<span className="hidden text-sm sm:block">{tag}</span>
-				</a>
-			</Link>
-		</li>
-	)
+        <li className="border-b border-gray-200 first:border-t last:border-none">
+            <Link
+                href={url}
+                prefetch={false}
+                data-num={index + 1}
+                className={searchResultStyles}
+                onClick={() => setOpen(false)}>
+
+                <span className="min-w-[3rem]">{symbol}</span>
+                <span className="grow">{name}</span>
+                <span className="hidden text-sm sm:block">{tag}</span>
+
+            </Link>
+        </li>
+    );
 }

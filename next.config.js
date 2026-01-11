@@ -3,9 +3,6 @@ const { withPlausibleProxy } = require('next-plausible')
 
 module.exports = withPlausibleProxy()({
 	trailingSlash: true,
-	experimental: {
-		scrollRestoration: true
-	},
 	async redirects() {
 		return [
 			{

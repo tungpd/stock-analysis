@@ -59,31 +59,35 @@ export function Features({ list = ['pro', 'ipoCalendar', 'stockScreener', 'marke
 	}
 
 	return (
-		<div className="space-y-3">
-			{list.map((feature: any) => {
+        <div className="space-y-3">
+            {list.map((feature: any) => {
 				if (isPro && FeaturesMap[feature].url === '/pro/') return null
 				return (
-					<div
+                    <div
 						className="group relative overflow-hidden rounded-lg border bg-white shadow hover:shadow-md"
 						key={FeaturesMap[feature].title}
 					>
-						<Link href={FeaturesMap[feature].url} prefetch={false}>
-							<a id={FeaturesMap[feature].tagId} onClick={() => logEvent(FeaturesMap[feature])}>
-								<div className="px-4 py-5 sm:p-6">
-									<div className="hh3">{FeaturesMap[feature].title}</div>
-									<div className="text-gray-800">{FeaturesMap[feature].description}</div>
-									<span
-										className="absolute top-6 right-6 text-gray-300 group-hover:text-blue-400"
-										aria-hidden="true"
-									>
-										<ArrowCTAIcon classes="h-6 w-6" />
-									</span>
-								</div>
-							</a>
-						</Link>
-					</div>
-				)
+                        <Link
+                            href={FeaturesMap[feature].url}
+                            prefetch={false}
+                            id={FeaturesMap[feature].tagId}
+                            onClick={() => logEvent(FeaturesMap[feature])}>
+
+                            <div className="px-4 py-5 sm:p-6">
+                                <div className="hh3">{FeaturesMap[feature].title}</div>
+                                <div className="text-gray-800">{FeaturesMap[feature].description}</div>
+                                <span
+                                    className="absolute top-6 right-6 text-gray-300 group-hover:text-blue-400"
+                                    aria-hidden="true"
+                                >
+                                    <ArrowCTAIcon classes="h-6 w-6" />
+                                </span>
+                            </div>
+
+                        </Link>
+                    </div>
+                );
 			})}
-		</div>
-	)
+        </div>
+    );
 }

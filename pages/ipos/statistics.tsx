@@ -28,13 +28,13 @@ export const IpoStatistics = ({ data, news, recent }: Props) => {
 	const url = '/ipos/statistics/'
 
 	return (
-		<>
-			<SEO
+        <>
+            <SEO
 				title="IPO Statistics and Charts"
 				description="Statistics and charts for initial public offerings (IPOs) on the US stock market. Annual data is available from 2000-2022 and monthly data for 2019-2022."
 				canonical={url}
 			/>
-			<Layout url={url}>
+            <Layout url={url}>
 				<div className="contain" id="ipos">
 					<h1 className="hh1">IPO Statistics</h1>
 					<IPONavigation path="statistics" />
@@ -60,8 +60,8 @@ export const IpoStatistics = ({ data, news, recent }: Props) => {
 								<h2 className="hh2 mb-2">2022 Initial Public Offerings</h2>
 								<p className="text-base text-gray-900 sm:text-lg">
 									{`There have been ${data.year2022} IPOs so far in 2022.`}{' '}
-									<Link href="/ipos/2022/" prefetch={false}>
-										<a className="bll">View all 2022 IPOs.</a>
+									<Link href="/ipos/2022/" prefetch={false} className="bll">
+										View all 2022 IPOs.
 									</Link>
 								</p>
 								<StatsChartMonthly title="2022 IPOs" data={data.months2022} />
@@ -71,8 +71,8 @@ export const IpoStatistics = ({ data, news, recent }: Props) => {
 								<p className="text-base text-gray-900 sm:text-lg">
 									There were 1035 IPOs in 2021, which was an all-time record. March had the most with a total
 									of 151, while August had the fewest with only 40 IPOs.{' '}
-									<Link href="/ipos/2021/" prefetch={false}>
-										<a className="bll">View all 2021 IPOs.</a>
+									<Link href="/ipos/2021/" prefetch={false} className="bll">
+										View all 2021 IPOs.
 									</Link>
 								</p>
 								<StatsChartMonthly title="2021 IPOs" data={data.months2021} />
@@ -82,8 +82,8 @@ export const IpoStatistics = ({ data, news, recent }: Props) => {
 								<p className="text-base text-gray-900 sm:text-lg">
 									There were 480 initial public offerings in 2020. October had the most with a total of 97
 									IPOs. March had the fewest with only 5.{' '}
-									<Link href="/ipos/2020/" prefetch={false}>
-										<a className="bll">View all 2020 IPOs.</a>
+									<Link href="/ipos/2020/" prefetch={false} className="bll">
+										View all 2020 IPOs.
 									</Link>
 								</p>
 								<StatsChartMonthly title="2020 IPOs" data={data.months2020} />
@@ -93,8 +93,8 @@ export const IpoStatistics = ({ data, news, recent }: Props) => {
 								<p className="text-lg">
 									There were 232 IPOs in 2019. May and July had the most with a total of 30. January had the
 									fewest, with only 7.{' '}
-									<Link href="/ipos/2019/" prefetch={false}>
-										<a className="bll">View all 2019 IPOs.</a>
+									<Link href="/ipos/2019/" prefetch={false} className="bll">
+										View all 2019 IPOs.
 									</Link>
 								</p>
 								<StatsChartMonthly title="2019 IPOs" data={data.months2019} />
@@ -115,8 +115,8 @@ export const IpoStatistics = ({ data, news, recent }: Props) => {
 					</div>
 				</div>
 			</Layout>
-		</>
-	)
+        </>
+    );
 }
 
 export default IpoStatistics

@@ -1,6 +1,6 @@
 import { getData } from 'functions/apis/API'
 import { buildReturnArray } from './buildReturnArray'
-import { useQuery } from 'react-query'
+import { useQuery } from '@tanstack/react-query'
 import { useAuthState } from 'auth/useAuthState'
 const PRO_KEY = process.env.NEXT_PUBLIC_PROKEY ?? null
 

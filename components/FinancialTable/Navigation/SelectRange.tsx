@@ -28,21 +28,25 @@ const Ranges = [
 
 export function SelectRange({ info, statement, range }: Props) {
 	return (
-		<nav>
-			<ul className="navmenu submenu">
+        <nav>
+            <ul className="navmenu submenu">
 				{Ranges.map(({ title, id, path }) => {
 					let statementPath = statement !== 'income-statement' ? `${statement}/` : ''
 					return (
-						<li key={id}>
-							<Link href={`/stocks/${info.symbol}/financials/${statementPath}${path}`} prefetch={false}>
-								<a className={range === id ? 'active' : 'inactive'} data-title={title}>
-									{title}
-								</a>
-							</Link>
-						</li>
-					)
+                        <li key={id}>
+                            <Link
+                                href={`/stocks/${info.symbol}/financials/${statementPath}${path}`}
+                                prefetch={false}
+                                className={range === id ? 'active' : 'inactive'}
+                                data-title={title}>
+
+                                {title}
+
+                            </Link>
+                        </li>
+                    );
 				})}
 			</ul>
-		</nav>
-	)
+        </nav>
+    );
 }

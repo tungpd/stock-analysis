@@ -1,6 +1,6 @@
 import { getData } from 'functions/apis/API'
 import { isTradingHours, isTradingHoursOpen } from 'functions/datetime/isTradingHours'
-import { useQuery } from 'react-query'
+import { useQuery } from '@tanstack/react-query'
 import { Info } from 'types/Info'
 import { Quote } from 'types/Quote'
 

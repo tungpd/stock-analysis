@@ -3,15 +3,15 @@ import Link from 'next/link'
 
 export function AboutActions() {
 	return (
-		<section className="bg-white">
-			<div className="mx-auto max-w-7xl py-16 px-4 sm:px-6 lg:py-20 lg:px-8">
+        <section className="bg-white">
+            <div className="mx-auto max-w-7xl py-16 px-4 sm:px-6 lg:py-20 lg:px-8">
 				<div className="lg:grid lg:grid-cols-3 lg:gap-8">
 					<div>
 						<h2 className="text-3xl font-bold text-gray-900">What to do next</h2>
 						<p className="mt-4 text-lg text-gray-600">
 							Reach out to our{' '}
-							<Link href="/contact/" prefetch={false}>
-								<a className="bll font-medium">customer support</a>
+							<Link href="/contact/" prefetch={false} className="bll font-medium">
+								customer support
 							</Link>{' '}
 							if you can't find the answers you are looking for.
 						</p>
@@ -22,8 +22,8 @@ export function AboutActions() {
 								<div className="text-xl font-medium leading-6 text-gray-900">Are you a serious investor?</div>
 								<div className="mt-2 text-lg text-gray-600">
 									Consider upgrading to{' '}
-									<Link href="/pro/" prefetch={false}>
-										<a className="bll font-medium">Stock Analysis Pro</a>
+									<Link href="/pro/" prefetch={false} className="bll font-medium">
+										Stock Analysis Pro
 									</Link>{' '}
 									for even more data and unlimited export ability.
 								</div>
@@ -41,8 +41,8 @@ export function AboutActions() {
 										GitHub
 									</a>{' '}
 									or check out our{' '}
-									<Link href="/apis/" prefetch={false}>
-										<a className="bll font-medium">API and data offerings</a>
+									<Link href="/apis/" prefetch={false} className="bll font-medium">
+										API and data offerings
 									</Link>
 									.
 								</div>
@@ -54,8 +54,8 @@ export function AboutActions() {
 								<div className="mt-2 text-lg text-gray-600">
 									We are committed to the absolute highest standards of data accuracy. If you see anything that
 									looks inaccurate,{' '}
-									<Link href="/contact/" prefetch={false}>
-										<a className="bll font-medium">send us a message</a>
+									<Link href="/contact/" prefetch={false} className="bll font-medium">
+										send us a message
 									</Link>{' '}
 									and we will look into it immediately.
 								</div>
@@ -99,6 +99,6 @@ export function AboutActions() {
 					</div>
 				</div>
 			</div>
-		</section>
-	)
+        </section>
+    );
 }

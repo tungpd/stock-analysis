@@ -18,26 +18,26 @@ function Error({ statusCode }: any) {
 	}, [event, isLoggedIn, isPro, statusCode])
 
 	return (
-		<UserLayout url={router.asPath}>
-			<Head>
+        <UserLayout url={router.asPath}>
+            <Head>
 				<title>An error occurred | Stock Analysis</title>
 			</Head>
-			<div className="hh1 mb-2">An error occurred</div>
-			<div className="mt-5 leading-relaxed lg:text-xl">
+            <div className="hh1 mb-2">An error occurred</div>
+            <div className="mt-5 leading-relaxed lg:text-xl">
 				Our admins will attempt to fix the error as soon as possible. If you need it fixed immediately, please send
 				us a message via the{' '}
-				<Link href="/contact/" prefetch={false}>
-					<a className="bll">contact form</a>
+				<Link href="/contact/" prefetch={false} className="bll">
+					contact form
 				</Link>{' '}
 				or email us directly at support@stockanalysis.com.
 			</div>
-			<Button text="Back to home page" url="/" className="mt-8" />
-			<div className="mt-12 text-base">
+            <Button text="Back to home page" url="/" className="mt-8" />
+            <div className="mt-12 text-base">
 				{statusCode ? `Server error. Status code: ${statusCode}` : 'Client error.'}
 			</div>
-			<div className="mt-2 text-base">{router.asPath ? `URL: ${router.asPath}` : ''}</div>
-		</UserLayout>
-	)
+            <div className="mt-2 text-base">{router.asPath ? `URL: ${router.asPath}` : ''}</div>
+        </UserLayout>
+    );
 }
 
 Error.getInitialProps = ({ res, err }: any) => {

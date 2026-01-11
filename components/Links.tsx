@@ -14,10 +14,13 @@ export const StockLink = ({ symbol, className, prefetch = false }: ILinks) => {
 	const symb = symbol.includes('.') ? symbol : `${symbol}/`
 
 	return (
-		<Link href={`/stocks/${symb.toLowerCase()}`} prefetch={prefetch}>
-			<a className={classes}>{symbol.toUpperCase()}</a>
-		</Link>
-	)
+        <Link
+            href={`/stocks/${symb.toLowerCase()}`}
+            prefetch={prefetch}
+            className={classes}>
+            {symbol.toUpperCase()}
+        </Link>
+    );
 }
 
 export const ETFLink = ({ symbol, className, prefetch = false }: ILinks) => {
@@ -26,10 +29,13 @@ export const ETFLink = ({ symbol, className, prefetch = false }: ILinks) => {
 	const classes = className || 'bll'
 
 	return (
-		<Link href={`/etf/${symbol.toLowerCase()}/`} prefetch={prefetch}>
-			<a className={classes}>{symbol.toUpperCase()}</a>
-		</Link>
-	)
+        <Link
+            href={`/etf/${symbol.toLowerCase()}/`}
+            prefetch={prefetch}
+            className={classes}>
+            {symbol.toUpperCase()}
+        </Link>
+    );
 }
 
 export const SymbolLink = ({ symbol, className, prefetch = false }: ILinks) => {

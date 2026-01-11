@@ -7,15 +7,16 @@ export function SingleNavItem({ item, path }: NavItemProps) {
 	const close = navMenuState(state => state.close)
 
 	return (
-		<Link href={item.href} prefetch={false}>
-			<a
-				className={matchPath(path, item.href) ? 'nav-item current group' : 'nav-item group'}
-				onClick={close}
-				title={item.name}
-			>
-				<item.icon className="nav-icon" />
-				<span className="nav-label">{item.name}</span>
-			</a>
-		</Link>
-	)
+        <Link
+            href={item.href}
+            prefetch={false}
+            className={matchPath(path, item.href) ? 'nav-item current group' : 'nav-item group'}
+            onClick={close}
+            title={item.name}>
+
+            <item.icon className="nav-icon" />
+            <span className="nav-label">{item.name}</span>
+
+        </Link>
+    );
 }

@@ -1,7 +1,7 @@
 // Adapted from here: https://github.com/ibrahimcesar/react-lite-youtube-embed
 import { useEvent } from 'hooks/useEvent'
 import { useState } from 'react'
-import useInView from 'react-cool-inview'
+import { useInView } from 'react-cool-inview'
 
 type Props = {
 	id: string

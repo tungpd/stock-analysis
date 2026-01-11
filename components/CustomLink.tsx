@@ -9,10 +9,10 @@ interface ICustomLink {
 
 export const CustomLink = ({ as, href, children }: ICustomLink) => {
 	return (
-		<Link as={as} href={href} prefetch={false}>
-			<a href={href}>{children}</a>
-		</Link>
-	)
+        <Link as={as} href={href} prefetch={false}>
+            {children}
+        </Link>
+    );
 }
 
 interface IExternal {

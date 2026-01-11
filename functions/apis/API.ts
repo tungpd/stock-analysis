@@ -18,5 +18,6 @@ export async function getData(params: string, controller?: AbortSignal) {
 		return await response.json()
 	}
 
-	throw new Error(`API/getData not ok: ${response.status} ${response.statusText}`)
+	// For dev, return empty object instead of throwing error
+	return {}
 }

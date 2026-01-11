@@ -1,6 +1,6 @@
 import { SortObject } from 'components/Screener/screener.types'
 import { FilterValue } from 'react-table'
-import create from 'zustand'
+import { create } from 'zustand'
 
 interface TableState {
 	tablePage: number

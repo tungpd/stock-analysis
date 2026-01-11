@@ -33,22 +33,26 @@ const Statements = [
 
 export function SelectStatement({ info, statement, range }: Props) {
 	return (
-		<nav>
-			<ul className="navmenu submenu">
+        <nav>
+            <ul className="navmenu submenu">
 				{Statements.map(({ title, id, path }) => {
 					let rangePath = range !== 'annual' ? `${range}/` : ''
 
 					return (
-						<li key={id}>
-							<Link href={`/stocks/${info.symbol}/financials/${path}${rangePath}`} prefetch={false}>
-								<a className={statement == id ? 'active' : 'inactive'} data-title={title}>
-									{title}
-								</a>
-							</Link>
-						</li>
-					)
+                        <li key={id}>
+                            <Link
+                                href={`/stocks/${info.symbol}/financials/${path}${rangePath}`}
+                                prefetch={false}
+                                className={statement == id ? 'active' : 'inactive'}
+                                data-title={title}>
+
+                                {title}
+
+                            </Link>
+                        </li>
+                    );
 				})}
 			</ul>
-		</nav>
-	)
+        </nav>
+    );
 }

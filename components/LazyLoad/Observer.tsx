@@ -1,4 +1,4 @@
-import useInView from 'react-cool-inview'
+import { useInView } from 'react-cool-inview'
 
 type Props = {
 	children: React.ReactNode

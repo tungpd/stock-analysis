@@ -16,10 +16,10 @@ export const Button = ({ url, text, className, id, onClick }: Props) => {
 	}
 
 	return (
-		<Link href={url} prefetch={false}>
-			<a className={classes} id={id} onClick={onClick}>
-				{text}
-			</a>
-		</Link>
-	)
+        <Link href={url} prefetch={false} className={classes} id={id} onClick={onClick}>
+
+            {text}
+
+        </Link>
+    );
 }

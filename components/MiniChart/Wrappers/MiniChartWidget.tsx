@@ -18,24 +18,24 @@ export function MiniChartWidget({ title, symbol, type, data: bulkdata }: Props) 
 	const data = bulkdata ? bulkdata[symbol] : undefined
 
 	return (
-		<Link href={`/${type}/${symbol.toLowerCase()}/`} prefetch={false}>
-			<a>
-				<div className="mcwidget">
-					<div>
-						<div className="mctitle">{title}</div>
-						<div className={cn('mcupdown', data ? data.color : '')}>
-							<UpDownIcons color={data?.color} />
-							<div className="mcchange">{data?.percentChange}</div>
-						</div>
-					</div>
-					<MiniChartWrapper
-						previousClose={data?.previousClose}
-						chart={data?.chart}
-						color={data?.color}
-						isFetching={!data?.chart}
-					/>
-				</div>
-			</a>
-		</Link>
-	)
+        <Link href={`/${type}/${symbol.toLowerCase()}/`} prefetch={false}>
+
+            <div className="mcwidget">
+                <div>
+                    <div className="mctitle">{title}</div>
+                    <div className={cn('mcupdown', data ? data.color : '')}>
+                        <UpDownIcons color={data?.color} />
+                        <div className="mcchange">{data?.percentChange}</div>
+                    </div>
+                </div>
+                <MiniChartWrapper
+                    previousClose={data?.previousClose}
+                    chart={data?.chart}
+                    color={data?.color}
+                    isFetching={!data?.chart}
+                />
+            </div>
+
+        </Link>
+    );
 }

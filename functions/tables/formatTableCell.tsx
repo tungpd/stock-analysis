@@ -72,10 +72,10 @@ export function formatSymbol(value: string, type: ScreenerTypes) {
 	let url = `/${urlPath}/${symbol.toLowerCase()}`
 
 	return (
-		<Link href={url} prefetch={false}>
-			<a>{value}</a>
-		</Link>
-	)
+        <Link href={url} prefetch={false}>
+            {value}
+        </Link>
+    );
 }
 
 // Turn a name into a link to the overview page
@@ -85,12 +85,12 @@ export function formatName(value: string, type: ScreenerTypes, symbol: string) {
 	let url = `/${urlPath}/${ticker.toLowerCase()}`
 
 	return (
-		<div className="string-left">
-			<Link href={url} prefetch={false}>
-				<a>{value}</a>
+        <div className="string-left">
+            <Link href={url} prefetch={false}>
+				{value}
 			</Link>
-		</div>
-	)
+        </div>
+    );
 }
 
 // Format a number with comma but 0 decimal points

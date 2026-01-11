@@ -10,12 +10,16 @@ type Props = {
 
 export function NavTab({ url, title, path, lvl }: Props) {
 	return (
-		<li>
-			<Link href={url} prefetch={false}>
-				<a data-title={title} className={tabActive(path, url, lvl)}>
-					{title}
-				</a>
-			</Link>
-		</li>
-	)
+        <li>
+            <Link
+                href={url}
+                prefetch={false}
+                data-title={title}
+                className={tabActive(path, url, lvl)}>
+
+                {title}
+
+            </Link>
+        </li>
+    );
 }
