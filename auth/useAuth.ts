@@ -20,7 +20,7 @@ export function useAuth() {
 	const { event: logEvent } = useEvent()
 	const router = useRouter()
 
-		useEffect(() => {
+	useEffect(() => {
 		// subscribe to login and logout events
 		// auth state is stored in localstorage and cookies
 		const { data: authListener } = supabase.auth.onAuthStateChange((event, session) => {
@@ -50,7 +50,9 @@ export function useAuth() {
 	// Get the user info from Supabase (fast)
 	// The user info is stored in localStorage so this is instant
 	async function checkUser() {
-		const { data: { user: userCheck } } = await supabase.auth.getUser()
+		const {
+			data: { user: userCheck }
+		} = await supabase.auth.getUser()
 
 		// if user is logged in
 		if (userCheck) {

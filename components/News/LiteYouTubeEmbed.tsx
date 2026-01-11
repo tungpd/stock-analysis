@@ -24,7 +24,7 @@ export function LiteYouTubeEmbed({ id, title }: Props) {
 	const background = inView
 		? {
 				backgroundImage: `url(https://i.ytimg.com/vi/${videoId}/hqdefault.jpg)`
-		  }
+			}
 		: { backgroundColor: '#EEE' }
 
 	const iframeSrc = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1`
