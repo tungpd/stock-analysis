@@ -85,13 +85,13 @@
 	"main": "next.config.js",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/stockanalysisdev/stock-analysis.git"
+		"url": "git@github.com:tungpd/stock-analysis.git"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/stockanalysisdev/stock-analysis/issues"
+		"url": "https://github.com/tungpd/stock-analysis/issues"
 	},
-	"homepage": "https://github.com/stockanalysisdev/stock-analysis#readme"
+	"homepage": "https://github.com/tungpd/stock-analysis#readme"
 }
